@@ -1,0 +1,124 @@
+<ion-header>
+   <ion-navbar color = 'light'>
+      <ion-title> 
+             </ion-title>
+            </ion-navbar>
+     <ion-segment>
+       <ion-segment-button value="detail" (click)= "openHomePage()">
+         Current Forecast
+       </ion-segment-button>
+       <ion-segment-button value="hourly" (click)= "openUnitsPage()">
+         7 Day Forecast
+       </ion-segment-button>
+     </ion-segment>
+ </ion-header>
+
+
+<ion-content >
+  <ion-grid  *ngIf="forecast; else no_forecast">
+     <ion-col >
+        <ion-row >
+           <ion-card  color = 'primary'   class="vcs" *ngFor="let f of forecast">
+              <ion-col>
+               <ion-row>
+                  <ion-item   color = 'primary'  >
+                     <strong> {{ f.dt | formatDate:'ddd'}}</strong>
+                  </ion-item>
+            
+                  <ion-item   color = 'primary'  >
+                     <strong> {{ f.dt | formatDate:' MMM D' }} </strong>
+                  </ion-item>
+               </ion-row>
+            </ion-col>
+
+              <ion-col>
+                 <ion-row>
+                    <ion-item  color = 'primary'  >
+                       <img src="http://openweathermap.org/img/w/{{f.weather[0].icon}}.png">          
+                       <strong>{{f.weather[0].description}}</strong> 
+                 </ion-item>
+                 </ion-row>
+              </ion-col>
+              <ion-col>
+                 <ion-row>
+              <ion-item  color = 'primary'  > 
+                 <strong>{{f.temp.day}}°</strong> 
+              </ion-item>
+            </ion-row>
+            </ion-col>
+              <ion-col>
+                 <ion-row>
+                    <ion-item  color = 'primary'  >
+                       <strong> {{windDirection(f.wind_deg)}} </strong>
+                    </ion-item>
+                 </ion-row>
+                 <ion-row>
+                    <ion-item  color = 'primary'  >
+                       <strong> {{f.wind_speed}} m/s </strong>
+                    </ion-item>
+                 </ion-row>
+              </ion-col>
+          
+           </ion-card>
+        </ion-row >
+     </ion-col>
+  </ion-grid>
+
+  <ng-template #no_forecast>
+   <ion-grid >
+
+
+      <ion-col >
+         <ion-row >
+            <ion-card  color = 'primary' >
+               <ion-col>
+                <ion-row>
+                   <ion-item   color = 'primary'  >
+                      <strong> </strong>
+                   </ion-item>
+                </ion-row>
+                <ion-row>
+                   <ion-item   color = 'primary'  >
+                      <strong> Weather Data Not found</strong>
+                   </ion-item>
+                </ion-row>
+             </ion-col>
+ 
+               <ion-col>
+                  <ion-row>
+                     <ion-item  color = 'primary'  >
+                                   
+                        
+                  </ion-item>
+                  </ion-row>
+               </ion-col>
+               <ion-col>
+                  <ion-row>
+               <ion-item  color = 'primary'  > 
+                  
+               </ion-item>
+             </ion-row>
+             </ion-col>
+               <ion-col>
+                  <ion-row>
+                     <ion-item  color = 'primary'  >
+                      
+                     </ion-item>
+                  </ion-row>
+                  <ion-row>
+                     <ion-item  color = 'primary'  >
+                     
+                     </ion-item>
+                  </ion-row>
+               </ion-col>
+           
+            </ion-card>
+         </ion-row >
+      </ion-col>
+   </ion-grid>
+ 
+
+
+
+  </ng-template>
+</ion-content>

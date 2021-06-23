@@ -24,7 +24,11 @@
     "@ionic-native/status-bar": "4.20.0",
     "@ionic/storage": "2.2.0",
     "ionic-angular": "3.9.9",
+    "ionic-tooltips": "^3.1.0",
+    "ionic3-auto-complete": "^1.6.3-alpha",
     "ionicons": "3.0.0",
+    "moment": "^2.29.1",
+    "promise-polyfill": "8.2.0",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.29"

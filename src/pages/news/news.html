@@ -1,0 +1,27 @@
+<ion-content padding>
+  <ion-grid *ngIf="news">
+     <ion-row>
+        <ion-col width-50 offset-25 text-center>
+           <h2 color = 'secondary' strong>News Stories from {{ country }}: {{ results }} </h2>
+           <h1  *ngFor="let n of news">
+              <ion-item>
+                 <h4><a [href]="n.url" > <img width="75" height="75" src="{{ n.urlToImage }}" > </a></h4>
+              </ion-item>
+              <ion-item>
+                 <h4>
+                    <a [href]="n.url" >
+                       <p> {{ n.title }} </p>
+                    </a>
+                 </h4>
+              </ion-item>
+              <ion-item>
+                 <h4>
+                    <a [href]="n.url" >
+                       <p> {{ n.description }} </p>
+                    </a>
+                 </h4>
+              </ion-item>
+           </h1>
+        </ion-col>
+     </ion-row>
+  </ion-grid>
