@@ -18,7 +18,6 @@ There is a Toggle button at the base of the tab which a View containing News fro
 The 7 day forcast tab. It features a list of ion cards displaying weather for the next 7 days.
 It also has a news button that can show the most recent news based on the selected city.
 
-![alt text](https://github.com/sandrarawat/weather-news-app-ionic/blob/main/src/jpg/7dayForecast.jpg "7 day forecast Tab")
 
 ### Settings Page
 Function:
