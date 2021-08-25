@@ -2,6 +2,21 @@
 
 This is an Ionic mobile application using the Angular Framework that displays the weather and news data through the use of API calls.
 
+## Quick Start
+
+1. cd into project repo
+
+        cd weather-news-app-ionic-main
+
+2. download node libraries
+
+        npm install
+
+3. start app in localhost
+
+        ionic serve
+
+
 # Structure
 The app features three pages
 1. Home page that displays the current forecast
