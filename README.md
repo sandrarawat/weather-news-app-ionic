@@ -16,6 +16,8 @@ This is an Ionic mobile application using the Angular Framework that displays th
 
         ionic serve
 
+4. Register for free weather and news api keys, the sites used in this project are openweathermap.org and newsapi.org. Input relevant keys into weather-news-app-ionic/src/providers
+
 
 # Structure
 The app features three pages
