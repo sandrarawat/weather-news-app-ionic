@@ -129,7 +129,6 @@ export class HomePage {
 								this.weather = '';
 								this.unit = '';
 								//this.location = this.location.input;
-								//this was the only way I could get the incorrect value eg.asdf and is an error and does not work at compile time
 								console.log('404');
 							}
 						);
